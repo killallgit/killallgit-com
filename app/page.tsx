@@ -1,65 +1,100 @@
-import Image from "next/image";
-
 export default function Home() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
-        </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
-      </main>
+    <div className="page">
+      <h1>Kill. All. Git.</h1>
+      <p style={{ textAlign: "center" }}>
+        <i>Software</i>
+      </p>
+
+      <nav className="main">
+        <a href="#home">Home</a> |{" "}
+        <a href="#products">Projects</a> |{" "}
+        <a href="#about">Blog</a> |{" "}
+        <a href="#contact">Contact</a>
+      </nav>
+
+      <hr />
+
+      <table className="layout">
+        <tbody>
+          <tr>
+            <td>
+              <h2 id="home">Welcome</h2>
+              <p>
+                Welcome to the home page.
+                We are a software company specializing in internet solutions.
+              </p>
+              <p>
+                Founded in 2001, we have helped two or three small and
+                mid-sized businesses bring their operations onto the
+                computer.
+              </p>
+
+              <h2 id="products">Our Products</h2>
+              <ul>
+                <li>
+                  <b>Band website</b> — A complete band website for my friend Kevin.
+                </li>
+                <li>
+                  <b>Invoice Pro</b> — An HTML form to print the form.
+                </li>
+                <li>
+                  <b>Road trip gallery</b> — Family road-trip gallery of photos with CSS and animated fade-in. Grandma talks about it still.
+                </li>
+                <li>
+                  <b>Custom Development</b> — We build software to your
+                  specifications, on time and on budget.
+                </li>
+              </ul>
+
+              <h2 id="about">About Us</h2>
+              <p>
+                Our team of programmers has over 25 combined years of
+                experience in C, C++, Visual Basic, and SQL. We pride
+                ourselves on writing reliable software and standing
+                behind every product we ship.
+              </p>
+
+              <h2 id="contact">Contact</h2>
+              <p>
+                KillAllGit Software Solutions<br />
+                1606 Northstar Dr<br />
+                Petaluma, USA 94954
+              </p>
+              <p>
+                Telephone: (971) 238-4475<br />
+                Fax: (971) 238-4475<br />
+                E-mail:{" "}
+                <a href="mailto:info@killallgit.com">info@killallgit.com</a>
+              </p>
+            </td>
+
+            <td className="sidebar">
+              <h2 style={{ marginTop: 0 }}>News</h2>
+              <p>
+                <b>May 2002</b> — InvoicePro 2.0 now shipping! Free
+                upgrade for registered users of version 1.x.
+              </p>
+              <p>
+                <b>May 2026</b> — We are pleased to announce our new
+                home page on the World Wide Web!
+              </p>
+
+              <h2>Office Hours</h2>
+              <p>
+                Monday – Friday<br />
+                9:00 AM – 5:00 PM
+              </p>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+
+      <footer>
+        <hr />
+        Copyright &copy; 1996 KillAllGit Software Solutions. All rights
+        reserved.
+      </footer>
     </div>
   );
 }
